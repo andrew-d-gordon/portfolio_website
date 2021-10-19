@@ -1,0 +1,200 @@
+/* MASTER STYLES */
+
+body {
+    font-family: "Lato", sans-serif;
+    margin: 0px;
+    background-color: whitesmoke;
+    margin-bottom: 3vh;
+}
+
+.container {
+    display: grid;
+    /* our entire layout will be considered as having columns with this*/
+    grid-template-columns: 1fr;
+}
+
+
+/* NAVIGATION STYLES */
+
+.navigation-wrap {
+    display: flex;
+    justify-content: space-between;
+    padding: 4.5vh;
+}
+
+.left-side {
+    display: flex;
+}
+
+.navigation-wrap>.left-side>div {
+    margin-right: 20px;
+    font-size: 0.9em;
+    text-transform: uppercase;
+}
+
+.navigation-link-wrap {
+    height: 22px;
+    border-bottom: 1px solid transparent;
+    transition: border-bottom 0.5s;
+}
+
+.navigation-link-wrap a {
+    color: #8a8a8a;
+    text-decoration: none;
+    transition: color 0.5s;
+}
+
+.navigation-link-wrap:hover {
+    border-bottom: 1px solid black;
+}
+
+.navigation-link-wrap a:hover {
+    color: black;
+}
+
+.active-nav-link {
+    border-bottom: 1px solid black;
+}
+
+.active-nav-link a {
+    color: black !important;
+}
+
+
+/* PORTFOLIO STYLES */
+
+.portfolio-items-wrapper {
+    display: grid;
+    /* gives each one of the columns, now three columns*/
+    grid-template-columns: 1fr 1fr 1fr;
+}
+
+.portfolio-item-wrapper {
+    position: relative;
+}
+
+.portfolio-img-background {
+    height: 350px;
+    width: 100%;
+    /* if you do not have images are same size, we want to crop images to sit next to eachother nicely */
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+.img-text-wrapper {
+    position: absolute;
+    top: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    text-align: center;
+    padding-left: 100px;
+    padding-right: 100px;
+}
+
+.logo-wrapper img {
+    width: 50%;
+    margin-bottom: 20px;
+}
+
+.logo-wrapper {
+    width: 50%;
+    margin-bottom: 20px;
+    font-size: 3vh;
+    color: white;
+    /*background-color: rgb(114, 128, 143);*/
+    font-weight: bold;
+    background-color: rgba(32, 32, 32, 0.267);
+    position: relative;
+}
+
+.logo-wrapper-darken {
+    transition: .5s;
+    background-color: transparent;
+}
+
+
+
+/* Needs to be more specific with selector */
+
+.img-text-wrapper .subtitle {
+    transition: 1s;
+    font-weight: 600;
+    color: transparent;
+}
+
+.img-text-wrapper .subtitle a{
+    transition: 1s;
+    font-weight: 600;
+    color: transparent;
+}
+
+
+.img-text-wrapper:hover .subtitle {
+    color: rgb(0, 174, 255);
+}
+
+.img-text-wrapper:hover .subtitle a{
+    color: rgb(0, 174, 255);
+}
+
+.img-darken {
+    transition: .5s;
+    filter: brightness(10%);
+}
+
+
+/* About Page */
+
+.two-column-wrapper {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+}
+
+.profile-image-wrapper {
+    width: 100%;
+    height: 80%;
+    padding: 1vh 1vh 1vh 1vh;
+    display: table;
+}
+
+.profile-image-wrapper img {
+    display: table-cell;
+    width: 100%;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+}
+
+.profile-content-wrapper {
+    font-family: "Lato", sans-serif;
+    font-size: 3vh;
+    text-align: left;
+    padding: 1vh 10vh 2vh 10vh;
+}
+
+.profile-content-wrapper h1 {
+    color: lightseagreen;
+}
+
+.profile-content-wrapper a {
+    font-family: "Lato", sans-serif;
+    font-size: 3vh;
+    text-align: left;
+}
+
+/* Footer Styles */
+
+footer {
+	position: fixed;
+	width: 100%;
+	left: 0;
+	bottom: 0;
+	background-color: lightgray;
+	color: white;
+	text-align: center;
+    font-family: "Lato", sans-serif;
+    font-weight: 500;
+}
+
