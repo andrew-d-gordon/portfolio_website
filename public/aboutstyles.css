@@ -14,8 +14,10 @@
 
 .card a {
     text-decoration: none;
-    font-size: 3vh;
+    font-family: "Lato", sans-serif;
+    font-size: 2.5vh;
     color: black;
+    transition: color .5s;
 }
 
 .card h1 {
@@ -34,7 +36,12 @@
     text-decoration:none;
     font-size: 2.5vh;
     padding-bottom: 1vh;
+    font-family: "Lato", sans-serif;
     color: black;
+}
+
+.card i {
+    width: 3vh;
 }
 
 .title {
