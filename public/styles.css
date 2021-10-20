@@ -32,9 +32,13 @@ body {
     display: flex;
 }
 
+.right-side {
+    font-size: min(max(2vh, 0.9em, 15px), 20px);
+}
+
 .navigation-wrap>.left-side>div {
     margin-right: 20px;
-    font-size: 0.9em;
+    font-size: min(max(2.5vh, 15px, 1vw), 20px);
     text-transform: uppercase;
 }
 
@@ -223,7 +227,7 @@ body {
 
 .title {
     color: grey;
-    font-size: 18px;
+    font-size: max(1.5vh, 15px, 1vw);
 }
 
 button {
@@ -277,7 +281,14 @@ footer {
     font-weight: 500;
 }
 
+/* Resume css */
 
+embed {
+    width: 100%;
+    min-height: 500vw;
+    min-height: 780vw;
+    height: max(600vh, 450px, 300vw);
+}
 
 @media screen and (max-width: 629px) {
     /* CSS for screens that are 629 pixels or less will be put here */

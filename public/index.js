@@ -10,7 +10,7 @@ const projects = {
         'image':'images/meshnetwork.jpg', 
         'title': 'images/titles/GOGUARD_TITLE.png', 
         'subtitle':'A sponsored project by Cisco which creates a mesh network for services that encrypts and dynamically routes communication.',
-        'github_link':'No public repo available',
+        'github_link':'https://csspp.soe.ucsc.edu/2021cisco',
         'tech':['WireGuard', 'Consul', 'Redis', 'Golang', 'BGP']},
     'Poly NS Tuner': {
         'image':'images/port1.jpg', 
