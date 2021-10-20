@@ -41,9 +41,7 @@ const projects = {
 function generateProjectTiles(example_Argument) {
     project_titles = Object.keys(projects);
     const portfolio_items_wrapper = document.getElementById("items-wrapper");
-    console.log("This is the portfolio items wrapper: ", portfolio_items_wrapper);
     for (const project_title of project_titles) {
-        console.log(project_title, projects[project_title]);
         
         //Build background content of tile: portfolio-img-background
         let portfolio_tile = document.createElement("div");
@@ -93,11 +91,8 @@ function addDynamicTileShading() {
     portfolioItems.forEach(portfolioItem => {
         portfolioItem.addEventListener('mouseover', () => {
             /* now taking the html object of portfolio item and using javascript to manipulate it, childNodes has all of domtoken items for div */
-            console.log(portfolioItem.childNodes);
-            console.log(portfolioItem.childNodes[0].classList);
             portfolioItem.childNodes[0].classList.add('img-darken');
             portfolioItem.childNodes[1].childNodes[0].classList.add('logo-wrapper-darken');
-            console.log("Other child nodes:", portfolioItem.childNodes[1].childNodes[0]); // try to darken the logo-wrapper div!!!
         })
 
         portfolioItem.addEventListener('mouseout', () => {

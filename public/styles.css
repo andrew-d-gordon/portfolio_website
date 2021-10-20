@@ -1,3 +1,9 @@
+/* Viewport styles */
+@viewport {
+    width: device-width;
+    zoom: 1.0;
+}
+
 /* MASTER STYLES */
 
 body {
@@ -101,9 +107,9 @@ body {
 }
 
 .logo-wrapper {
-    width: 50%;
+    width: 80%;
     margin-bottom: 20px;
-    font-size: 3vh;
+    font-size: max(2.75vh, 15px, 1.5vw);
     color: white;
     /*background-color: rgb(114, 128, 143);*/
     font-weight: bold;
@@ -167,11 +173,84 @@ body {
     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
 }
 
+
+/* Contact Card */
+
+.card {
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+    margin: auto;
+    text-align: center;
+    max-width: 100%;
+    width: 30%;
+    background-color: lightgray;
+    font-family: "Lato", sans-serif;
+    display: table-cell;
+    vertical-align: middle;
+    font-size: max(2.5vh, 15px, 1vw);
+}
+
+.card a {
+    text-decoration: none;
+    font-family: "Lato", sans-serif;
+    font-size: max(2.5vh, 15px, 1.5vw);
+    color: black;
+    transition: color .5s;
+}
+
+.card h1 {
+    text-decoration: none;
+    font-size: max(3.75vh, 15px, 1.5vw);
+    color: black;
+}
+
+.card h2 {
+    text-decoration: none;
+    font-size: max(2.5vh, 15px, 1.5vw);
+    color: darkgrey;
+}
+
+.card b {
+    text-decoration:none;
+    font-size: max(2.5vh, 15px, 1.5vw);
+    padding-bottom: 1vh;
+    font-family: "Lato", sans-serif;
+    color: black;
+}
+
+.card i {
+    width: 3vh;
+}
+
+.title {
+    color: grey;
+    font-size: 18px;
+}
+
+button {
+    border: none;
+    outline: 0;
+    display: inline-block;
+    padding: 8px;
+    color: white;
+    background-color: #000;
+    text-align: center;
+    cursor: pointer;
+    width: 100%;
+    font-size: max(3vh, 15px, 1.5vw);
+    font-family: "Lato", sans-serif;
+}
+
+a:hover {
+    opacity: 0.5;
+}
+
+/* About Page about me paragraph. */
+
 .profile-content-wrapper {
     font-family: "Lato", sans-serif;
-    font-size: 3vh;
+    font-size: max(3vh, 15px, 1.5vw);
     text-align: left;
-    padding: 1vh 10vh 2vh 10vh;
+    padding: 1vh 5vh 2vh 5vh;
 }
 
 .profile-content-wrapper h1 {
@@ -180,7 +259,7 @@ body {
 
 .profile-content-wrapper a {
     font-family: "Lato", sans-serif;
-    font-size: 3vh;
+    font-size: max(3vh, 15px, 1.5vw);
     text-align: left;
 }
 
@@ -198,3 +277,105 @@ footer {
     font-weight: 500;
 }
 
+
+
+@media screen and (max-width: 629px) {
+    /* CSS for screens that are 629 pixels or less will be put here */
+    .portfolio-items-wrapper {
+        display: grid;
+        /* gives each one of the columns, now three columns*/
+        grid-template-columns: 1fr;
+    }
+
+    .logo-wrapper {
+        width: 100%;
+        margin-bottom: 20px;
+        font-size: max(2.75vh, 15px, 1.5vw);
+        color: white;
+        /*background-color: rgb(114, 128, 143);*/
+        font-weight: bold;
+        background-color: rgba(32, 32, 32, 0.267);
+        position: relative;
+    }
+
+    .two-column-wrapper {
+        display: grid;
+        grid-template-columns: 1fr;
+    }
+
+    .profile-content-wrapper {
+        font-family: "Lato", sans-serif;
+        font-size: max(3vh, 20px, 1.5vw);
+        text-align: center;
+        padding: 1vh 5vh 2vh 5vh;
+        margin-bottom: 10vh;
+    }
+
+    .card {
+        box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+        margin: auto;
+        text-align: center;
+        max-width: 100%;
+        width: 100%;
+        background-color: lightgray;
+        font-family: "Lato", sans-serif;
+        display: table-cell;
+        vertical-align: middle;
+    }
+
+    .profile-image-wrapper {
+        width: 100%;
+        height: 80%;
+        padding: 1vh 1vh 1vh 1vh;
+        display: grid;
+    }
+}
+
+
+@media screen and (min-width: 629px) and (max-width: 1200px)  {
+    /* CSS for screens that are 1000 pixels or less will be put here */
+    .portfolio-items-wrapper {
+        display: grid;
+        /* gives each one of the columns, now three columns*/
+        grid-template-columns: 1fr 1fr;
+    }
+    
+    .logo-wrapper {
+        width: 100%;
+        margin-bottom: max(1vh, 10px, 1vw);
+        font-size: max(2.5vh, 15px, 1.5vw);
+        color: white;
+        /*background-color: rgb(114, 128, 143);*/
+        font-weight: bold;
+        background-color: rgba(32, 32, 32, 0.267);
+        position: relative;
+    }
+
+    .profile-image-wrapper {
+        width: 100%;
+        height: 80%;
+        padding: 1vh 1vh 1vh 1vh;
+        display: grid;
+        margin-bottom: 10vh;
+    }
+
+    .profile-content-wrapper {
+        font-family: "Lato", sans-serif;
+        font-size: max(3vh, 20px, 1.5vw);
+        text-align: center;
+        padding: 1vh 5vh 2vh 5vh;
+        margin-bottom: 10vh;
+    }
+
+    .card {
+        box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+        margin: auto;
+        text-align: center;
+        max-width: 100%;
+        width: 100%;
+        background-color: lightgray;
+        font-family: "Lato", sans-serif;
+        display: table-cell;
+        vertical-align: middle;
+    }
+}
