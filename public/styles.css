@@ -284,10 +284,9 @@ footer {
 /* Resume css */
 
 embed {
-    width: 100%;
-    min-height: 500vw;
-    min-height: 780vw;
-    height: max(600vh, 450px, 300vw);
+    width: 100vw;
+    height: 80vh;
+    max-height: 100vh;
 }
 
 @media screen and (max-width: 629px) {

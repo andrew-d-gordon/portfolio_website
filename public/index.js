@@ -6,7 +6,7 @@ const projects = {
         'subtitle':'A crowdsourced food finding web app aiming to help you find the best ethnic food in your area.',
         'github_link':'https://github.com/cyruskarsan/Delish-Food',
         'tech':['GCP', 'Google Maps API', 'JavaScript', 'Python', 'Google Firestore']},
-    'Mesh Network Generator': {
+    'GoGuard': {
         'image':'images/meshnetwork.jpg', 
         'title': 'images/titles/GOGUARD_TITLE.png', 
         'subtitle':'A sponsored project by Cisco which creates a mesh network for services that encrypts and dynamically routes communication.',
