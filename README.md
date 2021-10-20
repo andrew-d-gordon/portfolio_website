@@ -3,7 +3,7 @@ A personal portfolio website template. Currently personalized beyond the extent 
 
 Currently being hosted at:
 
-![https://andrewgordon.herokuapp.com/](https://andrewgordon.herokuapp.com/)
+https://andrewgordon.herokuapp.com/
 
 
 Non licensed photos can be obtained via unsplash.com.
