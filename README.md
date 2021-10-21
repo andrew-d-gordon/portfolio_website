@@ -5,5 +5,4 @@ Currently being hosted at:
 
 https://andrewgordon.herokuapp.com/
 
-
-Non licensed photos can be obtained via unsplash.com.
+Free high quality photos can be obtained via unsplash.com. Examples of some exist in public/images.
