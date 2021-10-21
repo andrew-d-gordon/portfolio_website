@@ -33,7 +33,16 @@ body {
 }
 
 .right-side {
-    font-size: min(max(2vh, 0.9em, 15px), 20px);
+    font-size: min(max(2.5vh, 15px, 1vw), 20px);
+    display: flex;
+}
+
+.right-side i {
+    font-size: max(2.5vh, 20px, 1vw);
+    width: max(4vh, 20px, 1vw);
+    display: relative;
+    color: black;
+    
 }
 
 .navigation-wrap>.left-side>div {
