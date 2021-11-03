@@ -407,9 +407,9 @@ embed {
 .modal-content-text {
     font-family: "Lato", sans-serif;
     font-size: max(3vh, 20px, 1.5vw);
-    align-self: center;
     text-align: center;
     margin-bottom: 1rem;
+    font-weight: 500;
 }
 
 .modal-content-tech {
