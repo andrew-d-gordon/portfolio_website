@@ -1,41 +1,47 @@
 //Build projects dictionary containing project titles, images and descriptions
 const projects = {
-'Delish Food Finder': {
+    'Delish Food Finder': {
         'image':'images/delish_food_finder.png', 
         'title': 'images/titles/DELISH_TITLE.png', 
         'subtitle':'A crowdsourced food finding web app aiming to help you find the best ethnic food in your area.',
         'tech':['GCP', 'Google Maps API', 'JavaScript', 'Python', 'Google Firestore'],
-        'project_link':'Project Repository*https://github.com/cyruskarsan/Delish-Food'}, // Project link contains link title and actual link (split by *)
+        'project_link':'https://github.com/cyruskarsan/Delish-Food',
+        'link_icon':'github'}, // font awesome icon to be utilized for additional info link
     'GoGuard': {
         'image':'images/meshnetwork.jpg', 
         'title': 'images/titles/GOGUARD_TITLE.png', 
         'subtitle':'A sponsored project by Cisco which creates a mesh network for services that encrypts and dynamically routes communication.',
         'tech':['WireGuard', 'Consul', 'Redis', 'Golang', 'BGP'],
-        'project_link':'Project Summary and Insights*https://csspp.soe.ucsc.edu/2021cisco'},
+        'project_link':'https://csspp.soe.ucsc.edu/2021cisco',
+        'link_icon':'globe'},
     'Poly NS Tuner': {
         'image':'images/port1.jpg', 
         'title': 'images/titles/POLYNSTUNER_TITLE.png', 
         'subtitle':'Polyphonic Pitch Detection, Scale Detection and Pitch Tracking Tools for audio with Python.',
         'tech':['Python', 'Librosa', 'NumPy', 'DSP', 'Fourier Transforms'],
-        'project_link':'Project Repository*https://github.com/andrew-d-gordon/Poly-NS-Tuner'},
+        'project_link':'https://github.com/andrew-d-gordon/Poly-NS-Tuner',
+        'link_icon':'github'},
     'Threaded HTTP Server and Load Balancer': {
         'image':'images/port4.jpg', 'title': 
         'images/titles/MTHTTPSERVER_TITLE.png', 
         'subtitle':'Multi-threaded HTTP Server and Load Balancer in C which can handle GET, PUT, HEAD and Health Check requests.',
         'tech':['Objective-C', 'Posix Threads', 'Sockets', 'HTTP', 'Unix'],
-        'project_link':'Project Repository*https://github.com/andrew-d-gordon/portfolio/tree/master/HTTP_Server_Load_Balancer'},
+        'project_link':'https://github.com/andrew-d-gordon/portfolio/tree/master/HTTP_Server_Load_Balancer',
+        'link_icon':'github'},
     'Line Find': {
         'image':'images/linefind.jpg', 
         'title': 'images/titles/LINEFIND_TITLE.png', 
         'subtitle':'A math library in Python created for finding unique sets of lines passing through N amount of 2D Points.',
         'tech':['Python', 'OOP', 'Unittest', 'IO', 'DFS'],
-        'project_link':'Project Repository*https://github.com/andrew-d-gordon/Line-Find'},
+        'project_link':'https://github.com/andrew-d-gordon/Line-Find',
+        'link_icon':'github'},
     'Image Web Scraper and Icon Generator':  {
         'image':'images/port5.jpg', 
         'title': 'images/titles/ICONGEN_TITLE.png', 
         'subtitle':'An image webscraper and icon generator library for Python.',
         'tech':['Python', 'Selenium', 'Pillow', 'WebDriver', 'HTTP'],
-        'project_link':'Project Repository*https://github.com/andrew-d-gordon/portfolio/tree/master/Image_Web_Scraper'},
+        'project_link':'https://github.com/andrew-d-gordon/portfolio/tree/master/Image_Web_Scraper',
+        'link_icon':'github'},
 }
 
 function generateProjectTiles() {
@@ -72,9 +78,11 @@ function generateProjectTiles() {
         let portfolio_tile_subtitle = document.createElement("div");
         portfolio_tile_subtitle.className = "subtitle";
         //Set necessary text attributes (projects may or may not have a repo link)
-        let project_text_link = projects[project_title]['project_link'].split('*');
-        console.log(project_text_link);
-        portfolio_tile_subtitle.innerHTML = projects[project_title]['subtitle']+'</br></br><u>Tech:</u> '+projects[project_title]['tech'].join(', ')+'</br></br>'+`<a href=${project_text_link[1]} target="_blank" rel="noopener noreferrer">${project_text_link[0]}</a>`;
+        let project_d = projects[project_title];
+        project_d = [project_d['subtitle'], project_d['tech'], project_d['project_link'], project_d['link_icon']]; // Tuple to hold project vals
+        portfolio_tile_subtitle.innerHTML = project_d[0]+'</br></br><u>Tech:</u> '+
+                                            project_d[1].join(', ')+'</br></br>'+
+                                            `<a href=${project_d[2]} target="_blank" rel="noopener noreferrer"><i class="fa fa-${project_d[3]}"></i></a>`;
         portfolio_tile_content.appendChild(portfolio_tile_subtitle);
         
         portfolio_tile.appendChild(portfolio_tile_content);
@@ -101,46 +109,6 @@ function addDynamicTileShading() {
             portfolioItem.childNodes[1].childNodes[0].childNodes[0].classList.remove('logo-wrapper-darken');
         })
     })
-}
-
-// Adds modals for portfolio tiles to view more project information
-function addTileModals() {
-    /* Portfolio Tile Modal button logic */
-    const modalTriggerButtons = document.querySelectorAll(".logo-wrapper-button");
-    const modal = document.querySelector(".modal");
-    const modalCloseButton = document.querySelector(".modal-close");
-
-    modalTriggerButtons.forEach(modalTriggerButton => {
-        modalTriggerButton.addEventListener("click", event=> {
-            // Set modal content
-            // ....
-            // Change display to visible
-            toggleModal();
-        })
-    })
-
-    modalCloseButton.addEventListener("click", event => {
-        toggleModal();
-    })
-
-    modal.addEventListener("click", event => { // If modal (back shadow) is clicked, close.
-        if(event.currentTarget===event.target) toggleModal();
-    })
-
-    function toggleModal() {
-        if(getComputedStyle(modal).display=="flex") {
-            modal.classList.add("modal-hide");
-            setTimeout(() => {
-                modal.style.display = "none";
-                modal.classList.remove("modal-show", "modal-hide");
-                document.body.style.overflow = "initial";
-            }, 200);
-        } else {
-            modal.style.display = "flex";
-            modal.classList.add("modal-show");
-            document.body.style.overflow = "hidden";
-        }
-    }
 }
 
 // Wait for dom content to load then call generateProjectTiles to create home page content
