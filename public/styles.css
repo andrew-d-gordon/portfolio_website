@@ -60,15 +60,17 @@ body {
 .navigation-link-wrap a {
     color: #8a8a8a;
     text-decoration: none;
-    transition: color 0.5s;
 }
 
 .navigation-link-wrap:hover {
+    color: black;
+    transition: color 0.5s;
     border-bottom: 1px solid black;
 }
 
 .navigation-link-wrap a:hover {
     color: black;
+    text-decoration: none;
 }
 
 .active-nav-link {
@@ -99,6 +101,8 @@ body {
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
+    transition: 0.5s;
+    filter: brightness(100%);
 }
 
 .img-text-wrapper {
@@ -118,16 +122,35 @@ body {
     width: 50%;
     margin-bottom: 20px;
 }
-
+/*
 .logo-wrapper {
     width: 80%;
     margin-bottom: 20px;
     font-size: max(2.75vh, 15px, 1.5vw);
     color: white;
+    font-weight: bold;
+    background-color: rgba(32, 32, 32, 0.267);
+    position: relative;
+}*/
+
+.logo-wrapper-button {
+    width: 100%;
+    margin-bottom: 20px;
+    font-size: max(2.75vh, 20px, 1.5vw);
+    color: whitesmoke;
     /*background-color: rgb(114, 128, 143);*/
     font-weight: bold;
     background-color: rgba(32, 32, 32, 0.267);
     position: relative;
+
+    border-radius: max(2px, .5vh, .5vw);
+    border: 2px solid transparent;
+    transition: border 0.5s;
+}
+.logo-wrapper-button:hover {
+    transition: .5s;
+    border: 2px solid rgba(245, 245, 245, 0.8);
+    border-radius: max(2px, .5vh, .5vw);
 }
 
 .logo-wrapper-darken {
@@ -135,28 +158,28 @@ body {
     background-color: transparent;
 }
 
-
-
-/* Needs to be more specific with selector */
-
 .img-text-wrapper .subtitle {
     transition: 1s;
     font-weight: 600;
     color: transparent;
 }
 
-.img-text-wrapper .subtitle a{
+.img-text-wrapper .subtitle a {
     transition: 1s;
     font-weight: 600;
     color: transparent;
 }
 
+.img-text-wrapper .subtitle i {
+    size: max(3vh, 15px, 1.5vw);
+    font-size: max(3.5vh, 20px, 1.5vw);
+}
 
 .img-text-wrapper:hover .subtitle {
     color: rgb(0, 174, 255);
 }
 
-.img-text-wrapper:hover .subtitle a{
+.img-text-wrapper:hover .subtitle a {
     color: rgb(0, 174, 255);
 }
 
@@ -287,7 +310,8 @@ footer {
 	color: white;
 	text-align: center;
     font-family: "Lato", sans-serif;
-    font-weight: 500;
+    font-weight: 700;
+    z-index: 2;
 }
 
 /* Resume css */
@@ -298,6 +322,150 @@ embed {
     max-height: 100vh;
 }
 
+/* Portfolio Modals for Tile Titles */
+
+.modal {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0,0,0,0.5);
+    z-index: 1;
+    overflow: auto;
+    display: none;
+    justify-content: center;
+    align-items: flex-start;
+}
+.modal.modal-show { /* modal fade in out specs */
+    animation: fadeIn 0.1s ease-in-out forwards;
+}
+.modal.modal-hide { 
+    animation: fadeOutUp 0.1s ease-in-out 0.1s forwards;
+}
+.modal.modal-show { 
+    animation: fadeInDown 0.3s ease-in-out forwards;
+}
+.modal.modal-hide {
+    animation: fadeOutUp 0.2s ease-in-out forwards;
+}
+
+.modal-content {
+    position: relative;
+    background-color: white;
+    width: 60%;
+    max-height: 80%;
+    margin: 2rem;
+    padding: 2rem;
+    border-radius: .25rem;
+    box-shadow: 0 4px 20px rgba(0,0,0,0.4);
+    margin-bottom: 2.5rem;
+    overflow: auto;
+}
+.modal-content h1 {
+    text-align: center;
+    margin-bottom: 2rem;
+}
+.modal-content p {
+    margin: 1rem 0;
+    line-height: 1.5rem;
+}
+.modal-close {
+    position: absolute;
+    top: 0;
+    right: 0;
+    font-size: 1.75rem;
+    font-weight: bold;
+    padding: 0 0.75rem;
+    color: (0,0,0,0.2);
+    cursor: pointer;
+    user-select: none;
+}
+.modal-close:hover, .modal-close:focus {
+    color: rgba(0,0,0,0.5);
+}
+
+.modal-content-images {
+    display: grid;
+    grid-template-columns: 1fr;
+    max-width: 100%;
+    justify-items: center;
+    align-items: center;
+    line-height: 1.5rem;
+    position: relative;
+    margin-bottom: 1rem;
+}
+.modal-content-images img {
+    max-width: 95%;
+    max-height: 95%;
+    line-height: 1.5rem;
+    border-radius: .25rem;
+    position: relative;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.4);
+}
+
+.modal-content-text {
+    font-family: "Lato", sans-serif;
+    font-size: max(3vh, 20px, 1.5vw);
+    text-align: center;
+    margin-bottom: 1rem;
+    font-weight: 500;
+}
+
+.modal-content-tech {
+    width: 100%;
+}
+.tech-logos {
+    width: 24%;
+    text-align: center;
+    display: inline-block;
+}
+.tech-logos img {
+    width: 24%;
+}
+
+
+/* Animations */
+
+@keyframes fadeInDown {
+    0% {
+        opacity: 0;
+        transform: translateY(-3rem);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+@keyframes fadeOutUp {
+    0% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+    100% {
+        opacity: 0;
+        transform: translateY(-3rem);
+    }
+}
+@keyframes fadeIn {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+@keyframes fadeOut {
+    0% {
+        opacity: 1;
+    }
+    100% {
+        opacity: 0;
+    }
+}
+
+/* Responsive sizing guides */
+
 @media screen and (max-width: 629px) {
     /* CSS for screens that are 629 pixels or less will be put here */
     .portfolio-items-wrapper {
@@ -306,15 +474,19 @@ embed {
         grid-template-columns: 1fr;
     }
 
-    .logo-wrapper {
+    .logo-wrapper-button {
         width: 100%;
         margin-bottom: 20px;
-        font-size: max(2.75vh, 15px, 1.5vw);
+        font-size: max(2.75vh, 20px, 1.5vw);
         color: white;
         /*background-color: rgb(114, 128, 143);*/
         font-weight: bold;
         background-color: rgba(32, 32, 32, 0.267);
         position: relative;
+
+        border-radius: max(2px, .5vh, .5vw);
+        border: 2px solid transparent;
+        transition: border 0.5s;
     }
 
     .two-column-wrapper {
@@ -348,6 +520,14 @@ embed {
         padding: 1vh 1vh 1vh 1vh;
         display: grid;
     }
+
+    .modal-content { padding: 2rem 1rem 1rem 1rem;}
+    .modal-content h1 { margin-bottom: 1.5rem;}
+
+    
+    .modal-content-images {
+        grid-template-columns: 1fr;
+    }
 }
 
 
@@ -359,15 +539,19 @@ embed {
         grid-template-columns: 1fr 1fr;
     }
     
-    .logo-wrapper {
+    .logo-wrapper-button {
         width: 100%;
         margin-bottom: max(1vh, 10px, 1vw);
-        font-size: max(2.5vh, 15px, 1.5vw);
+        font-size: max(2.75vh, 20px, 1.5vw);
         color: white;
         /*background-color: rgb(114, 128, 143);*/
         font-weight: bold;
         background-color: rgba(32, 32, 32, 0.267);
         position: relative;
+
+        border-radius: max(2px, .5vh, .5vw);
+        border: 2px solid transparent;
+        transition: border 0.5s;
     }
 
     .profile-image-wrapper {
@@ -397,4 +581,6 @@ embed {
         display: table-cell;
         vertical-align: middle;
     }
+    
+    .modal-content { width: 80%;}
 }
