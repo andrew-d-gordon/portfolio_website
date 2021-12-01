@@ -1,12 +1,12 @@
 //Build projects dictionary containing project titles, images and descriptions
 const projects = {
-    'Delish Food Finder': {
-        'image':'images/delish_food_finder.png', 
-        'title': 'images/titles/DELISH_TITLE.png', 
-        'subtitle':'A crowdsourced food finding web app aiming to help you find the best ethnic food in your area.',
-        'tech':['GCP', 'Google Maps API', 'JavaScript', 'Python', 'Google Firestore'],
-        'project_link':'https://github.com/cyruskarsan/Delish-Food',
-        'link_icon':'github'}, // font awesome icon to be utilized for additional info link
+    'Alpha Return': {
+        'image':'images/alphareturnbacking2.jpg', 
+        'title': '', 
+        'subtitle':'A cross-platform, finance application to help investors see if they are beating the market; achieving \'Alpha Return\'.',
+        'tech':['Flutter', 'Dart', 'Python', 'GCP', 'Node.js'],
+        'project_link':'https://github.com/andrew-d-gordon/alpha-return',
+        'link_icon':'github'},
     'GoGuard': {
         'image':'images/meshnetwork.jpg', 
         'title': 'images/titles/GOGUARD_TITLE.png', 
@@ -14,19 +14,19 @@ const projects = {
         'tech':['WireGuard', 'Consul', 'Redis', 'Golang', 'BGP'],
         'project_link':'https://csspp.soe.ucsc.edu/2021cisco',
         'link_icon':'globe'},
+    'Delish Food Finder': {
+        'image':'images/delish_food_finder.png', 
+        'title': 'images/titles/DELISH_TITLE.png', 
+        'subtitle':'A crowdsourced food finding web app aiming to help you find the best ethnic food in your area.',
+        'tech':['GCP', 'Google Maps API', 'JavaScript', 'Python', 'Google Firestore'],
+        'project_link':'https://github.com/cyruskarsan/Delish-Food',
+        'link_icon':'github'}, // font awesome icon to be utilized for additional info link
     'Poly NS Tuner': {
         'image':'images/port1.jpg', 
         'title': 'images/titles/POLYNSTUNER_TITLE.png', 
         'subtitle':'Polyphonic Pitch Detection, Scale Detection and Pitch Tracking Tools for audio with Python.',
         'tech':['Python', 'Librosa', 'NumPy', 'DSP', 'Fourier Transforms'],
         'project_link':'https://github.com/andrew-d-gordon/Poly-NS-Tuner',
-        'link_icon':'github'},
-    'Threaded HTTP Server and Load Balancer': {
-        'image':'images/port4.jpg', 'title': 
-        'images/titles/MTHTTPSERVER_TITLE.png', 
-        'subtitle':'Multi-threaded HTTP Server and Load Balancer in C which can handle GET, PUT, HEAD and Health Check requests.',
-        'tech':['Objective-C', 'Posix Threads', 'Sockets', 'HTTP', 'Unix'],
-        'project_link':'https://github.com/andrew-d-gordon/portfolio/tree/master/HTTP_Server_Load_Balancer',
         'link_icon':'github'},
     'Line Find': {
         'image':'images/linefind.jpg', 
@@ -35,12 +35,12 @@ const projects = {
         'tech':['Python', 'OOP', 'Unittest', 'IO', 'DFS'],
         'project_link':'https://github.com/andrew-d-gordon/Line-Find',
         'link_icon':'github'},
-    'Image Web Scraper and Icon Generator':  {
-        'image':'images/port5.jpg', 
-        'title': 'images/titles/ICONGEN_TITLE.png', 
-        'subtitle':'An image webscraper and icon generator library for Python.',
-        'tech':['Python', 'Selenium', 'Pillow', 'WebDriver', 'HTTP'],
-        'project_link':'https://github.com/andrew-d-gordon/portfolio/tree/master/Image_Web_Scraper',
+    'Threaded HTTP Server and Load Balancer': {
+        'image':'images/port4.jpg', 'title': 
+        'images/titles/MTHTTPSERVER_TITLE.png', 
+        'subtitle':'Multi-threaded HTTP Server and Load Balancer in C which can handle GET, PUT, HEAD and Health Check requests.',
+        'tech':['Objective-C', 'Posix Threads', 'Sockets', 'HTTP', 'Unix'],
+        'project_link':'https://github.com/andrew-d-gordon/portfolio/tree/master/HTTP_Server_Load_Balancer',
         'link_icon':'github'},
 }
 
