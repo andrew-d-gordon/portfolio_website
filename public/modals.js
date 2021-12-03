@@ -1,6 +1,6 @@
 var project_details = { // Holds more detailed summary regarding projects.
     'Delish Food Finder': {
-        'summary': 'Delish Food Finder is a Full Stack Web Application powered by Google Cloud Platform and Google Maps/Places API. The backend is written with Firebase functions via Node.js and it has the capability to cache API calls, store user vote information in the NoSQL DB Google Firestore.</br></br>Restaurants found for a given cuisine with crowdsourced votes will appear larger or smaller depending on the general user sentiment.</br></br>',
+        'summary': 'If you want to find great ethnic food in your area, Delish Food Finder is the tool for you. Restaurants found for a given cuisine, with crowdsourced votes, will appear larger or smaller depending on the community\'s sentiment.</br></br>Delish Food Finder is a Full Stack Web Application powered by Google Cloud Platform and Google Maps/Places API. The backend is written with Firebase functions via Node.js and it has the capability to cache API calls as well as store user vote information in Google\'s NoSQL Firestore.</br></br>',
         'media': ['images/delish_food_finder_raw.png'], //'images/delish_food_finder2.png'
         'tech': ['images/logos/tech/javascript_icon.png','images/logos/tech/gcp_cloud.png','images/logos/tech/firebase_icon.png','images/logos/tech/firestore_icon.svg'],
         'project_link':'https://github.com/cyruskarsan/Delish-Food',
@@ -14,7 +14,7 @@ var project_details = { // Holds more detailed summary regarding projects.
         'link_icon':'globe'
     },
     'Poly NS Tuner': {
-        'summary': 'The Poly NS Tuner library provides the ability to parse audio (.wav) files for polyphonic pitch information, scale detection, and pitch tracked MIDI file generation within Python.</br></br>The project utilizes Librosa, NumPy, and Fourier transforms for the DSP and pitch weighting algorithms as well as prettymidi for MIDI file generation. Python output provides a guess as to the scale of the provided wav file as well.</br></br>',
+        'summary': 'If you don\'t have perfect pitch, the Poly NS Tuner is the perfect tool for all your polyphonic pitch detection needs. The Poly NS Tuner python library provides the ability to parse audio (.wav) files for polyphonic pitch information, scale detection, and pitch tracked MIDI file generation within Python.</br></br>The project utilizes Librosa, NumPy, and Fourier transforms for the DSP and pitch weighting algorithms as well as prettymidi for MIDI file generation. Python output provides users with realtime guesses as to the scale of the provided wav file.</br></br>',
         'media': ['images/piano_chords_melody_Cm_vanilla_sample.png', 'images/piano_chords_melody_Cm_vanilla_midi_guess.png', 'images/piano_single_short_C2_vanilla_sample.png', 'images/piano_single_short_C2_vanilla_midi_guess.png'],
         'tech': ['images/logos/tech/python_icon.png', 'images/logos/tech/numpy_icon.png', 'images/logos/tech/librosa_icon.png', 'images/logos/tech/fourier.png'],
         'project_link':'https://github.com/andrew-d-gordon/Poly-NS-Tuner',
@@ -28,14 +28,14 @@ var project_details = { // Holds more detailed summary regarding projects.
         'link_icon':'github'
     },
     'Line Find': {
-        'summary': 'This project serves as a library of code for finding lines that cross through a specified number of unique points from a set of 2D points. The generation of variably sized and random sets of input points is viable through the point_test_creator.py module. Driver code within find_lines.py utilizes it\'s own functions and other modules within src in order to achieve the discovery of lines in O(n*n) time.</br></br>Two definitions of uniqueness are present from the first to second image, the functions to achieve each are finding_unique_lines() and finding_max_unique_point_lines() respectively. The number of points threshold can be set as well, e.g. the third and fourth image are run on the same sets of points but utilize a point threshold of 3 and 4 respectively. More information on available functions, objects, as well as the line finding algorithms can be found in the docs folder.</br></br>',
+        'summary': 'Line Find is a python library for finding lines which cross through a specified number of unique points in set (2D). The generation of variably sized and random sets of input points is viable through the point_test_creator.py module. Driver code within find_lines.py utilizes it\'s own functions and other modules within src in order to achieve the discovery of lines in O(n*n) time.</br></br>Two definitions of uniqueness are provided from the first to second image, the functions to achieve each are finding_unique_lines() and finding_max_unique_point_lines() respectively. The number of points threshold can be set as well, as shown in the third and fourth image. These are outputs from the same set of points but utilizing a point threshold of 3 and 4 respectively. More information on available functions, objects, as well as the line finding algorithms can be found in the docs folder.</br></br>',
         'media': ['images/linefind_test_output.png', 'images/linefind_test_output_strict.png', 'images/unique_set_test_1000_random_1000_graph.png', 'images/unique_set_test_1000_random_1000_4_thresh_graph.png'], //'images/linefind_test_output_strict.png'
         'tech': ['images/logos/tech/python_icon.png', 'images/logos/tech/dfs_icon.png', 'images/logos/tech/unittest_icon.png', 'images/logos/tech/matplot.png'],
         'project_link':'https://github.com/andrew-d-gordon/Line-Find',
         'link_icon':'github'
     },
     'Alpha Return': {
-        'summary': 'A cross-platform finance application prototyped in Python and realized in Flutter. Stock data is retrieved through the Yahoo Finance API and calls are cached on GCP via Firebase functions developed with Node.js.</br></br>It serves to help investors find out whether or not they are making alpha return on investments against various market indices (S&P500, Dow Jones, NASDAQ) or cryptocurrencies such as Bitcoin.</br></br>Alpha Return refers to excess returns earned on an investment above the benchmark return. For example, the annual return on an investment in Bitcoin against the S&P500 as a benchmark from January through November of 2021, was respectively about 70 and 27 percent annual return. This would result in a 53% alpha return on said investment (with Annual Return as the metric).</br></br>',
+        'summary': 'Alpha Return refers to excess returns earned on an investment above a benchmark return. The annual return on an investment of Bitcoin from January through November of 2021 would have yielded a 70 percent annual return. During this same time the S&P500 garnered a 27% annual return. This means the invesment in Bitcoin would have 53% Alpha Return with the S&P500 as a benchmark (with annual return as the return metric).</br></br>\'Alpha Return\' the app is cross-platform, finance application which serves to help investors find out whether or not they are making Alpha Return on investments against various market indices (S&P500, Dow Jones, NASDAQ) or cryptocurrencies such as Bitcoin. The front-end functionality was prototyped in Python and realized in Flutter with Dart. Stock data is retrieved through the Yahoo Finance API, and calls are cached on Google Cloud Platform via Firebase functions developed with Node.js.</br></br>',
         'media': ['images/nexus_demo_beta.png', 'images/nexus_demo_beta_alpha_return.png'],
         'tech': ['images/logos/tech/flutter.png','images/logos/tech/dart.png','images/logos/tech/gcp_cloud.png','images/logos/tech/firebase_icon.png'],
         'project_link':'https://github.com/andrew-d-gordon/alpha-return',
@@ -50,7 +50,6 @@ function addTileContent(project) {
     const modal_title = document.querySelector('.modal-title');
     const modal_text = document.querySelector('.modal-content-text');
     const modal_tech = document.querySelector('.modal-content-tech');
-    console.log(project, `media length: ${project_details[project]['media'].length}`);
     let single_img = project_details[project]['media'].length == 1;
     
     const modal_images = single_img ? // If using single image, utilize single image div
