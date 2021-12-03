@@ -82,7 +82,7 @@ function generateProjectTiles() {
         project_d = [project_d['subtitle'], project_d['tech'], project_d['project_link'], project_d['link_icon']]; // Tuple to hold project vals
         portfolio_tile_subtitle.innerHTML = project_d[0]+'</br></br><u>Tech:</u> '+
                                             project_d[1].join(', ')+'</br></br>'+
-                                            `<a href=${project_d[2]} target="_blank" rel="noopener noreferrer"><i class="fa fa-${project_d[3]}"></i></a>`;
+                                            `<a href=${project_d[2]}><i class="fa fa-${project_d[3]}"></i></a>`;
         portfolio_tile_content.appendChild(portfolio_tile_subtitle);
         
         portfolio_tile.appendChild(portfolio_tile_content);

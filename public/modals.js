@@ -15,7 +15,7 @@ var project_details = { // Holds more detailed summary regarding projects.
     },
     'Poly NS Tuner': {
         'summary': 'The Poly NS Tuner library provides the ability to parse audio (.wav) files for polyphonic pitch information, scale detection, and pitch tracked MIDI file generation within Python.</br></br>The project utilizes Librosa, NumPy, and Fourier transforms for the DSP and pitch weighting algorithms as well as prettymidi for MIDI file generation. Python output provides a guess as to the scale of the provided wav file as well.</br></br>',
-        'media': ['images/sample_midi_guess_sidebyside.png', 'images/piano_chords_melody_Cm_vanilla_sample.png','images/piano_chords_melody_Cm_vanilla_midi_guess.png'],
+        'media': ['images/piano_chords_melody_Cm_vanilla_sample.png', 'images/piano_chords_melody_Cm_vanilla_midi_guess.png', 'images/piano_single_short_C2_vanilla_sample.png', 'images/piano_single_short_C2_vanilla_midi_guess.png'],
         'tech': ['images/logos/tech/python_icon.png', 'images/logos/tech/numpy_icon.png', 'images/logos/tech/librosa_icon.png', 'images/logos/tech/fourier.png'],
         'project_link':'https://github.com/andrew-d-gordon/Poly-NS-Tuner',
         'link_icon':'github'
@@ -28,8 +28,8 @@ var project_details = { // Holds more detailed summary regarding projects.
         'link_icon':'github'
     },
     'Line Find': {
-        'summary': 'This project serves as a library of code for finding lines that cross through a number of unique points from a set of input points. The generation of variably sized and randomized sets of input points is viable through the point_test_creator.py module. Driver code within find_lines.py utilizes it\'s own functions and other modules within src in order to achieve the discovery of lines through sets of points in O(n*n) time.</br></br>More information on available functions, objects, as well as the line finding algorithms can be found in the docs folder. The specific line finding algorithms are detailed within the finding_unique_lines() and finding_max_unique_point_lines() sections inside of docs/find_lines.md.</br></br>',
-        'media': ['images/linefind_test_output.png', 'images/linefind_test_output_strict.png'], //'images/linefind_test_output_strict.png'
+        'summary': 'This project serves as a library of code for finding lines that cross through a specified number of unique points from a set of 2D points. The generation of variably sized and random sets of input points is viable through the point_test_creator.py module. Driver code within find_lines.py utilizes it\'s own functions and other modules within src in order to achieve the discovery of lines in O(n*n) time.</br></br>Two definitions of uniqueness are present from the first to second image, the functions to achieve each are finding_unique_lines() and finding_max_unique_point_lines() respectively. The number of points threshold can be set as well, e.g. the third and fourth image are run on the same sets of points but utilize a point threshold of 3 and 4 respectively. More information on available functions, objects, as well as the line finding algorithms can be found in the docs folder.</br></br>',
+        'media': ['images/linefind_test_output.png', 'images/linefind_test_output_strict.png', 'images/unique_set_test_1000_random_1000_graph.png', 'images/unique_set_test_1000_random_1000_4_thresh_graph.png'], //'images/linefind_test_output_strict.png'
         'tech': ['images/logos/tech/python_icon.png', 'images/logos/tech/dfs_icon.png', 'images/logos/tech/unittest_icon.png', 'images/logos/tech/matplot.png'],
         'project_link':'https://github.com/andrew-d-gordon/Line-Find',
         'link_icon':'github'
@@ -48,9 +48,14 @@ var project_details = { // Holds more detailed summary regarding projects.
 function addTileContent(project) {
     // Modal Related Divs
     const modal_title = document.querySelector('.modal-title');
-    const modal_images = document.querySelector('.modal-content-images');
     const modal_text = document.querySelector('.modal-content-text');
     const modal_tech = document.querySelector('.modal-content-tech');
+    console.log(project, `media length: ${project_details[project]['media'].length}`);
+    let single_img = project_details[project]['media'].length == 1;
+    
+    const modal_images = single_img ? // If using single image, utilize single image div
+    document.querySelector('.modal-content-images-solo') :
+    document.querySelector('.modal-content-images');
 
     modal_title.innerHTML = project+'</br>'+
         `<a href=${project_details[project]['project_link']} target="_blank" rel="noopener noreferrer"><span style="color: Black;"><i class="fa fa-${project_details[project]['link_icon']}"></i></span></a>`; // Add project title
@@ -92,6 +97,7 @@ function addTileModals() {
     const modal = document.querySelector(".modal");
     const modalCloseButton = document.querySelector(".modal-close");
     const modal_images = document.querySelector('.modal-content-images');
+    const modal_images_solo = document.querySelector('.modal-content-images-solo');
     const modal_tech = document.querySelector('.modal-content-tech');
     
     /* Portfolio Tile Modal button logic */
@@ -121,6 +127,7 @@ function addTileModals() {
                 modal.classList.remove("modal-show", "modal-hide");
                 document.body.style.overflow = "initial";
                 modal_images.innerHTML = null; // Reset modal images
+                modal_images_solo.innerHTML = null;
                 modal_tech.innerHTML = null; // Reset tech logos
             }, 200);
         } else {

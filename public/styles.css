@@ -353,7 +353,7 @@ embed {
 .modal-content {
     position: relative;
     background-color: white;
-    width: 60%;
+    width: 75%;
     max-height: 80%;
     margin: 2rem;
     padding: 2rem;
@@ -387,7 +387,7 @@ embed {
 
 .modal-content-images {
     display: grid;
-    grid-template-columns: 1fr;
+    grid-template-columns: 1fr 1fr;
     max-width: 100%;
     justify-items: center;
     align-items: center;
@@ -396,6 +396,25 @@ embed {
     margin-bottom: 1rem;
 }
 .modal-content-images img {
+    max-width: 95%;
+    max-height: 95%;
+    line-height: 1.5rem;
+    border-radius: .25rem;
+    position: relative;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.4);
+}
+
+.modal-content-images-solo {
+    display: grid;
+    grid-template-columns: 1fr;
+    max-width: 100%;
+    justify-items: center;
+    align-items: center;
+    line-height: 1.5rem;
+    position: relative;
+    margin-bottom: 1rem;
+}
+.modal-content-images-solo img {
     max-width: 95%;
     max-height: 95%;
     line-height: 1.5rem;
@@ -421,6 +440,7 @@ embed {
     display: inline-block;
 }
 .tech-logos img {
+    min-width: 30px;
     width: 24%;
 }
 
