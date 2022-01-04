@@ -1,30 +1,30 @@
 var project_details = { // Holds more detailed summary regarding projects.
-    'Delish Food Finder': {
-        'summary': 'If you want to find great ethnic food in your area, Delish Food Finder is the tool for you. Restaurants found for a given cuisine, with crowdsourced votes, will appear larger or smaller depending on the community\'s sentiment.</br></br>Delish Food Finder is a Full Stack Web Application powered by Google Cloud Platform and Google Maps/Places API. The backend is written with Firebase functions via Node.js and it has the capability to cache API calls as well as store user vote information in Google\'s NoSQL Firestore.</br></br>',
-        'media': ['images/delish_food_finder_raw.png'], //'images/delish_food_finder2.png'
-        'tech': ['images/logos/tech/javascript_icon.png','images/logos/tech/gcp_cloud.png','images/logos/tech/firebase_icon.png','images/logos/tech/firestore_icon.svg'],
-        'project_link':'https://github.com/cyruskarsan/Delish-Food',
+    'Alpha Return': {
+        'summary': 'Alpha Return refers to excess returns earned on an investment above a benchmark return. The annual return on an investment of Bitcoin from January through November of 2021 would have yielded a 70 percent annual return. During this same time the S&P500 garnered a 27% annual return. This means the invesment in Bitcoin would have 53% Alpha Return with the S&P500 as a benchmark (with annual return as the return metric).</br></br>\'Alpha Return\' the app is a cross-platform (Android, IOS, Web), finance application which serves to help investors determine whether or not they are making Alpha Return on investments against various benchmarks such as market indices (S&P500, Dow Jones, NASDAQ) or cryptocurrencies (Bitcoin). The front-end functionality was prototyped in Python and realized in Flutter with Dart. Stock data is retrieved through the Yahoo Finance API, and calls are cached on Google Cloud Platform via Firebase functions developed with Node.js.</br></br>',
+        'media': ['images/dark_theme_beta_no_investments.png', 'images/dark_theme_beta_add_investment.png', 'images/dark_theme_beta.png', 'images/dark_theme_beta_alpha_return_test.png'],
+        'tech': ['images/logos/tech/flutter.png','images/logos/tech/dart.png','images/logos/tech/gcp_cloud.png','images/logos/tech/firebase_icon.png'],
+        'project_link':'https://github.com/andrew-d-gordon/alpha-return',
         'link_icon':'github'
     },
     'GoGuard': {
-        'summary': 'GoGuard offers a solution: a managed network, where all services are treated exactly the same, with the encryption and proxying handled innately. It helps backend network engineers by making management and scalability of enterprise networks easy.</br></br>',
+        'summary': 'GoGuard offers a solution: a managed network, where all services are treated exactly the same, with the encryption and proxying handled innately. It helps backend network engineers by making management and scalability of enterprise networks easy.</br></br>Goguard was built for Cisco by a team of four computer science students in the Software Engineering Track at UCSC (Jan-June 2021). I personally worked as backend developer on the encryption and dynamic routing of communication between services in the mesh-network. The development was done in Unix environments utilizing Golang as well as the integration of VPN and BGP daemons (initialized with bash scripts).</br></br>',
         'media': ['images/goguard_poster.jpg'],
         'tech': ['images/logos/tech/wireguard_icon.png', 'images/logos/tech/gobgp_icon.png', 'images/logos/tech/consul_icon.png', 'images/logos/tech/golang_icon.png'],
         'project_link':'https://csspp.soe.ucsc.edu/2021cisco',
         'link_icon':'globe'
+    },
+    'Delish Food Finder': {
+        'summary': 'If you want to find great ethnic food in your area, Delish Food Finder is the tool for you. Restaurants found for a given cuisine, with crowdsourced votes, will appear larger or smaller depending on the community\'s sentiment.</br></br>Delish Food Finder is a Full Stack Web Application powered by Google Cloud Platform and Google Maps/Places API. The backend is written with Firebase functions via Node.js and it has the capability to cache API calls as well as store user vote information in Google\'s NoSQL Firestore.</br></br>Built out by a team of five computer science students in the Software Engineering Track at UCSC (Aug-Dec 2020); continued development and GCP integration completed by Cyrus Karsan and myself. I personally worked as a full stack developer in the creation of server functions, integration of frontend calls to the backend, working with Google APIs (Maps, Sign Ins), as well as being the primary UX/UI developer.</br></br>',
+        'media': ['images/delish_food_finder_raw.png'], //'images/delish_food_finder2.png'
+        'tech': ['images/logos/tech/javascript_icon.png','images/logos/tech/gcp_cloud.png','images/logos/tech/firebase_icon.png','images/logos/tech/firestore_icon.svg'],
+        'project_link':'https://github.com/cyruskarsan/Delish-Food',
+        'link_icon':'github'
     },
     'Poly NS Tuner': {
         'summary': 'If you don\'t have perfect pitch, the Poly NS Tuner is the perfect tool for all your polyphonic pitch detection needs. The Poly NS Tuner python library provides the ability to parse audio (.wav) files for polyphonic pitch information, scale detection, and pitch tracked MIDI file generation within Python.</br></br>The project utilizes Librosa, NumPy, and Fourier transforms for the DSP and pitch weighting algorithms as well as prettymidi for MIDI file generation. Python output provides users with realtime guesses as to the scale of the provided wav file.</br></br>',
         'media': ['images/piano_chords_melody_Cm_vanilla_sample.png', 'images/piano_chords_melody_Cm_vanilla_midi_guess.png', 'images/piano_single_short_C2_vanilla_sample.png', 'images/piano_single_short_C2_vanilla_midi_guess.png'],
         'tech': ['images/logos/tech/python_icon.png', 'images/logos/tech/numpy_icon.png', 'images/logos/tech/librosa_icon.png', 'images/logos/tech/fourier.png'],
         'project_link':'https://github.com/andrew-d-gordon/Poly-NS-Tuner',
-        'link_icon':'github'
-    },
-    'Threaded HTTP Server and Load Balancer': {
-        'summary': 'This project contains an HTTP Server utilizing multithreading and a Load Balancer, each written in C. The library used for retrieving requests to the servers is socket and the library for multithreading is pthread. Various flags can be set to specify the number of threads, desired port number and logging option for the HTTP Server, and server addresses must be passed for the Load Balancer.</br></br>',
-        'media': [''],
-        'tech': ['images/logos/tech/c_icon.png', 'images/logos/tech/http_icon.png', 'images/logos/tech/unix.png', 'images/logos/tech/multithreading.png'],
-        'project_link':'https://github.com/andrew-d-gordon/portfolio/tree/master/HTTP_Server_Load_Balancer',
         'link_icon':'github'
     },
     'Line Find': {
@@ -34,11 +34,11 @@ var project_details = { // Holds more detailed summary regarding projects.
         'project_link':'https://github.com/andrew-d-gordon/Line-Find',
         'link_icon':'github'
     },
-    'Alpha Return': {
-        'summary': 'Alpha Return refers to excess returns earned on an investment above a benchmark return. The annual return on an investment of Bitcoin from January through November of 2021 would have yielded a 70 percent annual return. During this same time the S&P500 garnered a 27% annual return. This means the invesment in Bitcoin would have 53% Alpha Return with the S&P500 as a benchmark (with annual return as the return metric).</br></br>\'Alpha Return\' the app is cross-platform, finance application which serves to help investors find out whether or not they are making Alpha Return on investments against various market indices (S&P500, Dow Jones, NASDAQ) or cryptocurrencies such as Bitcoin. The front-end functionality was prototyped in Python and realized in Flutter with Dart. Stock data is retrieved through the Yahoo Finance API, and calls are cached on Google Cloud Platform via Firebase functions developed with Node.js.</br></br>',
-        'media': ['images/dark_theme_beta_no_investments.png', 'images/dark_theme_beta_add_investment.png', 'images/dark_theme_beta.png', 'images/dark_theme_beta_alpha_return_test.png'],
-        'tech': ['images/logos/tech/flutter.png','images/logos/tech/dart.png','images/logos/tech/gcp_cloud.png','images/logos/tech/firebase_icon.png'],
-        'project_link':'https://github.com/andrew-d-gordon/alpha-return',
+    'Threaded HTTP Server and Load Balancer': {
+        'summary': 'This project contains an HTTP Server utilizing multithreading and a Load Balancer, each written in C. The library used for retrieving requests to the servers is socket and the library for multithreading is pthread. Various flags can be set to specify the number of threads, desired port number and logging option for the HTTP Server, and server addresses must be passed for the Load Balancer.</br></br>',
+        'media': [''],
+        'tech': ['images/logos/tech/c_icon.png', 'images/logos/tech/http_icon.png', 'images/logos/tech/unix.png', 'images/logos/tech/multithreading.png'],
+        'project_link':'https://github.com/andrew-d-gordon/portfolio/tree/master/HTTP_Server_Load_Balancer',
         'link_icon':'github'
     }
 };
