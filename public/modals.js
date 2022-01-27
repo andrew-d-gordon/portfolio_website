@@ -15,7 +15,7 @@ var project_details = { // Holds more detailed summary regarding projects.
     },
     'Delish Restaurant Finder': {
         'summary': 'If you want to find great ethnic food in your area, Delish Restaurant Finder is the tool for you. Restaurants found for a given cuisine, with crowdsourced votes, will appear larger or smaller depending on the community\'s sentiment.</br></br>Delish Restaurant Finder is a Full Stack Web Application powered by Google Cloud Platform and Google Maps/Places API. The backend is written with Firebase functions via Node.js and it has the capability to cache API calls as well as store user vote information in Google\'s NoSQL Firestore.</br></br>Built out by a team of five computer science students in the Software Engineering Track at UCSC (Aug-Dec 2020); continued development and GCP integration completed by Cyrus Karsan and myself. I personally worked as a full stack developer in the creation of server functions, integration of frontend calls to the backend, working with Google APIs (Maps, Sign Ins), as well as being the primary UX/UI developer.</br></br>',
-        'media': ['images/delish_food_finder_raw.png'], //'images/delish_food_finder2.png'
+        'media': ['images/delish_food_finder_raw.png'],
         'tech': ['images/logos/tech/javascript_icon.png','images/logos/tech/gcp_cloud.png','images/logos/tech/firebase_icon.png','images/logos/tech/firestore_icon.svg'],
         'project_link':'https://github.com/cyruskarsan/Delish-Food',
         'link_icon':'github'
@@ -79,7 +79,6 @@ function addTileContent(project) {
         modal_tech_logo.src = tech_logos[i];
 
         tech_logo.appendChild(modal_tech_logo);
-        //tech_container.appendChild(modal_tech_logo);
         modal_tech.appendChild(tech_logo);
     }
 }
