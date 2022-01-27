@@ -14,7 +14,7 @@ const projects = {
         'tech':['WireGuard', 'Consul', 'Redis', 'Golang', 'BGP'],
         'project_link':'https://csspp.soe.ucsc.edu/2021cisco',
         'link_icon':'globe'},
-    'Delish Food Finder': {
+    'Delish Restaurant Finder': {
         'image':'images/delish_food_finder.png', 
         'title': 'images/titles/DELISH_TITLE.png', 
         'subtitle':'A crowdsourced food finding web app aiming to help you find the best ethnic food in your area.',
